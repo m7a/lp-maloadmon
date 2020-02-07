@@ -1,0 +1,23 @@
+mdvl-loadmon (1.1.4) stable; urgency=medium
+
+  * Update to new ant-based build system.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Fri, 07 Feb 2020 22:34:43 +0100
+
+mdvl-loadmon (1.1.3) stable; urgency=low
+
+  * Highest level was never printed correctly.
+
+ -- Linux-Fan <Ma_Sys.ma@web.de>  Thu, 25 Jul 2013 17:21:32 +0200
+
+mdvl-loadmon (1.1.1) stable; urgency=low
+
+  * Added privilege dropping
+
+ -- Linux-Fan <Ma_Sys.ma@web.de>  Sun, 02 Jun 2013 00:12:18 +0200
+
+mdvl-loadmon (1.1.0) stable; urgency=low
+
+  * Initial creation to replace a similar shellscript
+
+ -- Linux-Fan <Ma_Sys.ma@web.de>  Sat, 01 Jun 2013 23:45:35 +0200

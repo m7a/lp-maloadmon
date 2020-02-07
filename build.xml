@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+
+<!-- APPLICATION METADATA -->
+<property name="masysma.target"     value="maloadmon"/>
+<property name="masysma.c.standard" value="gnu99"/>
+<property name="masysma.c.link.1"   value="-lrt"/>
+<property name="mdpc.name"          value="mdvl-loadmon"/>
+<property name="mdpc.section"       value="utils"/>
+<property name="mdpc.arch"          value="any"/>
+<property name="mdpc.descrs"        value="Colorized Load AVG numbers"/>
+<property name="mdpc.cpyear"        value="2013"/>
+<property name="mdpc.descrl">
+ Ma_Sys.ma Load Monitor displays load AVG numbers in different colors according
+ to their size. It is designed to be run in background e.g. on a virtual
+ terminal and be there whenever one needs it.
+</property>
+
+<property name="mdpc.file.install">
+maloadmon /usr/bin
+</property>
+
+<!-- CI INTEGRATION -->
+<target name="package_triggered" depends="package">
+	<property name="masysma.ci.trigger" value="newver"/>
+</target>
+<target name="package_triggered_i386" depends="package">
+	<property name="masysma.ci.trigger"     value="newver"/>
+	<property name="masysma.ci.runenv"      value="ssh"/>
+	<property name="masysma.ci.runenv.name" value="i386"/>
+</target>
+
+<!-- CONSTANT TPL IMPORT -->
+<property environment="env"/>
+<condition property="masysma.internal.includepath.rel" value="${env.MDVL_CI_PHOENIX_ROOT}" else=".."><isset property="env.MDVL_CI_PHOENIX_ROOT"/></condition>
+<property name="masysma.internal.includepath" location="${masysma.internal.includepath.rel}"/>
+<property name="masysma.internal.loadpath" value="${masysma.internal.includepath}/co-build/ant-build-template.xml"/>
+<condition property="masysma.internal.load" value="file://${masysma.internal.loadpath}" else="https://raw.githubusercontent.com/m7a/co-build/master/ant-build-template.xml"><resourceexists><file file="${masysma.internal.loadpath}"/></resourceexists></condition>
+<import><url url="${masysma.internal.load}"/></import>
+
+</project>
