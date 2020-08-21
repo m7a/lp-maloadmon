@@ -7,7 +7,7 @@ lang: en-US
 author: ["Linux-Fan, Ma_Sys.ma (Ma_Sys.ma@web.de)"]
 keywords: ["monitoring", "loadmon", "c"]
 x-masysma-version: 1.0.0
-x-masysma-repository: https://www.github.com/m7a/bp-maloadmon
+x-masysma-repository: https://www.github.com/m7a/lp-maloadmon
 x-masysma-website: https://masysma.lima-city.de/11/maloadmon.xhtml
 x-masysma-owned: 1
 x-masysma-copyright: |
